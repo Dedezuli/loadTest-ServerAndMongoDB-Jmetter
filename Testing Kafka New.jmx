@@ -1,0 +1,3450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Testing Kafka" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="auth_token" elementType="Argument">
+            <stringProp name="Argument.name">auth_token</stringProp>
+            <stringProp name="Argument.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjQwMDMwMjgsImlhdCI6MTY2Mzc0MzIyOCwiaWQiOjI1fQ.Y4Dij5_g4LeTPPmh3AOQNFahH4RbxHCQ0OpkpN9FsJ0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">ridhwan.kamil@edenfarm.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="password" elementType="Argument">
+            <stringProp name="Argument.name">password</stringProp>
+            <stringProp name="Argument.value">sayurwortel</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="wrt_id" elementType="Argument">
+            <stringProp name="Argument.name">wrt_id</stringProp>
+            <stringProp name="Argument.value">3342336</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="warehouse_id" elementType="Argument">
+            <stringProp name="Argument.name">warehouse_id</stringProp>
+            <stringProp name="Argument.value">720896</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="sales_order_id" elementType="Argument">
+            <stringProp name="Argument.name">sales_order_id</stringProp>
+            <stringProp name="Argument.value">3928817682</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="recognition_date" elementType="Argument">
+            <stringProp name="Argument.name">recognition_date</stringProp>
+            <stringProp name="Argument.value">2022-07-01</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="shipping_address" elementType="Argument">
+            <stringProp name="Argument.name">shipping_address</stringProp>
+            <stringProp name="Argument.value">testing, Kel. Ragunan, Kec. Pasar Minggu, Kota Jakarta Selatan, DKI Jakarta, 12550</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="id_product1" elementType="Argument">
+            <stringProp name="Argument.name">id_product1</stringProp>
+            <stringProp name="Argument.value">3080192</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">92602368 in reflika</stringProp>
+          </elementProp>
+          <elementProp name="id_product2" elementType="Argument">
+            <stringProp name="Argument.name">id_product2</stringProp>
+            <stringProp name="Argument.value">10616832</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">90112000</stringProp>
+          </elementProp>
+          <elementProp name="auth_tokendev" elementType="Argument">
+            <stringProp name="Argument.name">auth_tokendev</stringProp>
+            <stringProp name="Argument.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTU1NDI4MDQsImlhdCI6MTY1NTI4MzAwNCwiaWQiOjF9.G3nIFIOOI9ix9c78F1vZSbmK4iUtpLUBua1WjDHxbw8</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="id_product1dev" elementType="Argument">
+            <stringProp name="Argument.name">id_product1dev</stringProp>
+            <stringProp name="Argument.value">26869760</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="id_product2dev" elementType="Argument">
+            <stringProp name="Argument.name">id_product2dev</stringProp>
+            <stringProp name="Argument.value">23134208</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email_v3" elementType="Argument">
+            <stringProp name="Argument.name">email_v3</stringProp>
+            <stringProp name="Argument.value">superadmin@edenfarm.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="password_v3" elementType="Argument">
+            <stringProp name="Argument.name">password_v3</stringProp>
+            <stringProp name="Argument.value">abcde123</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Authorization</stringProp>
+            <stringProp name="Header.value">Bearer ${auth_token}</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Login  RnD" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP RnD" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;email&quot;:&quot;${email}&quot;,&#xd;
+    &quot;password&quot;:&quot;${password}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apirnd.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/auth</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames"></stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">auth_token</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP dev" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;email&quot;:&quot;${email}&quot;,&#xd;
+    &quot;password&quot;:&quot;${password}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/auth</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames"></stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">auth_token</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP staging" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;email&quot;:&quot;${email}&quot;,&#xd;
+    &quot;password&quot;:&quot;${password}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/auth</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames"></stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">auth_token</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Login V3" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;email&quot;: &quot;superadmin@edenfarm.id&quot;,&#xd;
+    &quot;password&quot;: &quot;abcde123&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">gateway.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/account/v1/auth/login</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames"></stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">auth_token</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Update  DO" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id1}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 5,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id2}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 5,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apirnd.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_update/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;1073872944&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 8,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;1073938480&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apirnd.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_update/3079274503</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">D:/apache-jmeter-5.4.3/bin/test-data-doi_id100.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">do_id,doi_id1,doi_id2</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Cancel  DO" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">30</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Cancel RnD" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;note&quot;: &quot;Cancelled note Diyana&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apirnd.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">v1/warehouse/delivery_order/produce_cancel/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request dev" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;note&quot;: &quot;Cancelled note Diyana&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">v1/warehouse/delivery_order/produce_cancel/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="cancel staging No kafka" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;note&quot;: &quot;Cancelled note Diyana&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/cancel/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">//String do_id = vars.get(&quot;do_id_from_json&quot;);
+String do_id = ${do_id}
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_id_terdelete2.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="cancel staging  kafka" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;note&quot;: &quot;Cancelled note Diyana&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">v1/warehouse/delivery_order/produce_cancel/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">//String do_id = vars.get(&quot;do_id_from_json&quot;);
+String do_id = ${do_id}
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_id_terdelete2.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config stag" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">D:/apache-jmeter-5.4.3/bin/test_idDO_deletestaging.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">do_id</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config dev" enabled="false">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">D:/apache-jmeter-5.4.3/bin/convertcsv (6).csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">do_id</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Create SalesOrder" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request RnD" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;merchant_id&quot;: &quot;2888433664&quot;,&#xd;
+  &quot;branch_id&quot;: &quot;3717136384&quot;,&#xd;
+  &quot;area_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;delivery_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;order_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;note&quot;: &quot;testing SO Kafka Jmeter diyana - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;order_type_id&quot;: &quot;65536&quot;,&#xd;
+  &quot;salesperson_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;term_payment_sls_id&quot;: &quot;655360&quot;,&#xd;
+  &quot;term_invoice_sls_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;payment_group_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;billing_address&quot;: &quot;jl masjid nomor 100&quot;,&#xd;
+  &quot;redeem_code&quot;: &quot;&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana 1&quot;,&#xd;
+      &quot;subtotal&quot;: 0,&#xd;
+      &quot;qty&quot;: 10,&#xd;
+      &quot;unit_price&quot;: 25000,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana 2&quot;,&#xd;
+      &quot;subtotal&quot;: 0,&#xd;
+      &quot;qty&quot;: 10,&#xd;
+      &quot;unit_price&quot;: 25000,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apirnd.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/sales/order</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;id_so_RnD_dev.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Create SO staging" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;merchant_id&quot;: &quot;1583218688&quot;,&#xd;
+  &quot;branch_id&quot;: &quot;1635778560&quot;,&#xd;
+  &quot;area_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;delivery_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;order_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;note&quot;: &quot;testing SO Kafka Jmeter diyana - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;order_type_id&quot;: &quot;65536&quot;,&#xd;
+  &quot;salesperson_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;term_payment_sls_id&quot;: &quot;655360&quot;,&#xd;
+  &quot;term_invoice_sls_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;payment_group_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;billing_address&quot;: &quot;jl masjid nomor 100&quot;,&#xd;
+  &quot;redeem_code&quot;: &quot;&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;subtotal&quot;: 0,&#xd;
+      &quot;qty&quot;: 10,&#xd;
+      &quot;unit_price&quot;: 25000,&#xd;
+      &quot;product_id&quot;: &quot;${id_product1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;subtotal&quot;: 0,&#xd;
+      &quot;qty&quot;: 10,&#xd;
+      &quot;unit_price&quot;: 50000,&#xd;
+      &quot;product_id&quot;: &quot;${id_product2}&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/sales/order</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">so_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String so_id = vars.get(&quot;so_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+so_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-IDSO-5datastaging.csv&quot;, true);
+fstream.write(so_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Create SO dev" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;merchant_id&quot;: &quot;2959933440&quot;,&#xd;
+  &quot;branch_id&quot;: &quot;3823501312&quot;,&#xd;
+  &quot;area_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;delivery_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;order_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;note&quot;: &quot;testing SO Redis Jmeter diyana - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;order_type_id&quot;: &quot;65536&quot;,&#xd;
+  &quot;salesperson_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;term_payment_sls_id&quot;: &quot;655360&quot;,&#xd;
+  &quot;term_invoice_sls_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;payment_group_id&quot;: &quot;131072&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;billing_address&quot;: &quot;jl masjid nomor 100&quot;,&#xd;
+  &quot;redeem_code&quot;: &quot;&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;subtotal&quot;: 0,&#xd;
+      &quot;qty&quot;: 10,&#xd;
+      &quot;unit_price&quot;: 25000,&#xd;
+      &quot;product_id&quot;: &quot;${id_product1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;subtotal&quot;: 0,&#xd;
+      &quot;qty&quot;: 10,&#xd;
+      &quot;unit_price&quot;: 50000,&#xd;
+      &quot;product_id&quot;: &quot;${id_product2}&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/sales/order</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">so_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String so_id = vars.get(&quot;so_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+so_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-IDSOdevke3.csv&quot;, true);
+fstream.write(so_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Create 1 DO 1 so " enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="create Dev  RnD" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;product1&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;product1&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apirnd.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_iddelete.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Dev so 1" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_idDO_updatedevke1.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="create staging no kafka" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;:10 ,&#xd;
+      &quot;product_id&quot;: &quot;${id_product1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;${id_product2}&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_idDO_deletstagingke1.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create staging kafka" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;:10 ,&#xd;
+      &quot;product_id&quot;: &quot;${id_product1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;${id_product2}&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_idDO_stag1000data_cancel.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create staging" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;:10 ,&#xd;
+      &quot;product_id&quot;: &quot;${id_product1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;${id_product2}&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_idDO_stag1000data_cancel.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request stock mongodb" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;jobs_id&quot;: &quot;105054208&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;3112304656&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;720896&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;3342336&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;2022-06-06&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;testing, Kel. Ragunan, Kec. Pasar Minggu, Kota Jakarta Selatan, DKI Jakarta, 12550&quot;,&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;token&quot;: &quot;&quot;,&#xd;
+  &quot;type&quot;: &quot;create&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;3058686&quot;,&#xd;
+      &quot;product_id&quot;: &quot;3080192&quot;,&#xd;
+      &quot;product_code&quot;: &quot;&quot;,&#xd;
+      &quot;product_name&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;3058687&quot;,&#xd;
+      &quot;product_id&quot;: &quot;10616832&quot;,&#xd;
+      &quot;product_code&quot;: &quot;&quot;,&#xd;
+      &quot;product_name&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/stock/consume_create_stock</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_idDO_ke3.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+          <stringProp name="TestPlan.comments">Running API sampai 10 hit</stringProp>
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data staging" enabled="true">
+          <stringProp name="filename">D:/apache-jmeter-5.4.3/bin/test-IDSO-5datastaging.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">sales_order_id</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Rnd" enabled="false">
+          <stringProp name="filename">D:/apache-jmeter-5.4.3/bin/id_so_RnD_dev.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">sales_order_id</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Create DO betul" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">120</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request RnD" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apirnd.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_iddelete.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Dev mongodb" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;Test Diyana&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_create_mongo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_iddelete.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Update  DO-time 30 s" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">30</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">1800</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="update stag kafka" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${so_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id1}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 4,&#xd;
+      &quot;product_id&quot;: &quot;${id_product1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id2}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 4,&#xd;
+      &quot;product_id&quot;: &quot;${id_product2}&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_update/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="update stag No kafka" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${so_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id1}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 3,&#xd;
+      &quot;product_id&quot;: &quot;${id_product1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id2}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;:2,&#xd;
+      &quot;product_id&quot;: &quot;${id_product2}&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request dev" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${so_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id1}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 6,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id2}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 7,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_update/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="update dev RnD" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${so_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id1}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 5,&#xd;
+      &quot;product_id&quot;: &quot;26869760&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${doi_id2}&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 6,&#xd;
+      &quot;product_id&quot;: &quot;23134208&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apirnd.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_update/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+order_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id.csv&quot;, true);
+out.write(do_id);
+out.write(System.getProperty(&quot;line.separator&quot;));
+out.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>false</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <hostname>true</hostname>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config stag" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">D:/apache-jmeter-5.4.3/bin/test_staging100data_update.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">do_id,doi_id1,doi_id2,so_id</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config dev" enabled="false">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">D:/apache-jmeter-5.4.3/bin/test_doi_iddev.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">do_id,doi_id1,doi_id2,so_id</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="false">
+          <intProp name="calcMode">0</intProp>
+          <doubleProp>
+            <name>throughput</name>
+            <value>667.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+        </ConstantThroughputTimer>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+          <stringProp name="ConstantTimer.delay">3000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Create DO-time 30 s" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">30</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">1800</stringProp>
+        <stringProp name="ThreadGroup.delay">1</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;note&quot;: &quot;testing banyak DO - tolong abaikan saja&quot;,&#xd;
+  &quot;wrt_id&quot;: &quot;${wrt_id}&quot;,&#xd;
+  &quot;warehouse_id&quot;: &quot;${warehouse_id}&quot;,&#xd;
+  &quot;sales_order_id&quot;: &quot;${sales_order_id}&quot;,&#xd;
+  &quot;recognition_date&quot;: &quot;${recognition_date}&quot;,&#xd;
+  &quot;shipping_address&quot;: &quot;${shipping_address}&quot;,&#xd;
+  &quot;delivery_order_items&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;1310720&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+      &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;1376256&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;&quot;,&#xd;
+      &quot;uom&quot;: &quot;KG&quot;,&#xd;
+      &quot;note&quot;: &quot;&quot;,&#xd;
+      &quot;weight&quot;: 10,&#xd;
+      &quot;order_qty&quot;: 10,&#xd;
+     &quot;deliver_qty&quot;: 10,&#xd;
+      &quot;product_id&quot;: &quot;1441792&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/produce_create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-order_id50.csv&quot;, true);
+fstream.write(do_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+          <intProp name="calcMode">0</intProp>
+          <doubleProp>
+            <name>throughput</name>
+            <value>667.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+        </ConstantThroughputTimer>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+          <stringProp name="TestPlan.comments">Running API sampai 10 hit</stringProp>
+          <stringProp name="ConstantTimer.delay">90</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Detail DO" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Requeststaging" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor SO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">so_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.sales_order.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DOI ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">doi_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.delivery_order_items[*].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">//do id
+String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+//doi ke satu
+String doi_id1 = vars.get(&quot;doi_id_from_json_1&quot;);
+log.info(&quot;order idnya: &quot;+doi_id1);
+//doi ke kedua
+String doi_id2 = vars.get(&quot;doi_id_from_json_2&quot;);
+log.info(&quot;order idnya: &quot;+doi_id2);
+//doi ke ketiga
+String doi_id3 = vars.get(&quot;doi_id_from_json_3&quot;);
+log.info(&quot;order idnya: &quot;+doi_id3);
+//SO id
+String so_id = vars.get(&quot;so_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+so_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_staging100data_update.csv&quot;, true);
+fstream.write(do_id+&quot;,&quot;+doi_id1+&quot;,&quot;+doi_id2+&quot;,&quot;+so_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Requestdev" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/${do_id}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor SO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">so_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.sales_order.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DOI ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">doi_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.delivery_order_items[*].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">//do id
+String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+//doi ke satu
+String doi_id1 = vars.get(&quot;doi_id_from_json_1&quot;);
+log.info(&quot;order idnya: &quot;+doi_id1);
+//doi ke kedua
+String doi_id2 = vars.get(&quot;doi_id_from_json_2&quot;);
+log.info(&quot;order idnya: &quot;+doi_id2);
+//doi ke ketiga
+String doi_id3 = vars.get(&quot;doi_id_from_json_3&quot;);
+log.info(&quot;order idnya: &quot;+doi_id3);
+//SO id
+String so_id = vars.get(&quot;so_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+so_id);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test_doi_iddev.csv&quot;, true);
+fstream.write(do_id+&quot;,&quot;+doi_id1+&quot;,&quot;+doi_id2+&quot;,&quot;+so_id);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">D:/apache-jmeter-5.4.3/bin/test_idDO_stag1000data_cancel.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">do_id</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Detail DO 1 id" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">240</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request stgaing" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/3112108048</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DOI ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">doi_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.delivery_order_items[*].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">//doi ke satu
+String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+//doi ke satu
+String doi_id1 = vars.get(&quot;doi_id_from_json_1&quot;);
+log.info(&quot;order idnya: &quot;+doi_id1);
+//doi ke kedua
+String doi_id2 = vars.get(&quot;doi_id_from_json_2&quot;);
+log.info(&quot;order idnya: &quot;+doi_id2);
+//doi ke ketiga
+String doi_id3 = vars.get(&quot;doi_id_from_json_3&quot;);
+log.info(&quot;order idnya: &quot;+doi_id3);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-doi_id.csv&quot;, true);
+fstream.write(do_id+&quot;,&quot;+doi_id1+&quot;,&quot;+doi_id2+&quot;,&quot;+doi_id3);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request dev" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order/3094347783</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DOI ID" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">doi_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.delivery_order_items[*].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="false">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">//doi ke satu
+String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+//doi ke satu
+String doi_id1 = vars.get(&quot;doi_id_from_json_1&quot;);
+log.info(&quot;order idnya: &quot;+doi_id1);
+//doi ke kedua
+String doi_id2 = vars.get(&quot;doi_id_from_json_2&quot;);
+log.info(&quot;order idnya: &quot;+doi_id2);
+//doi ke ketiga
+String doi_id3 = vars.get(&quot;doi_id_from_json_3&quot;);
+log.info(&quot;order idnya: &quot;+doi_id3);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-doi_id.csv&quot;, true);
+fstream.write(do_id+&quot;,&quot;+doi_id1+&quot;,&quot;+doi_id2+&quot;,&quot;+doi_id3);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="false">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">E:/apache-jmeter-5.3/bin/test-data-order_id.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">do_id</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="List  DO" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">coreapi.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order?perpage=100&amp;embeds=sales_order_id,sales_order_id.area_id,sales_order_id.branch_id,wrt_id,warehouse_id&amp;conditions=Or.code.icontains:%252COr.sales_order_id.code.icontains:%7Crecognition_date:2022-05-30%7Cstatus:1&amp;orderby=-id</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DOI ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">doi_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.delivery_order_items[*].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">//doi ke satu
+String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+//doi ke satu
+String doi_id1 = vars.get(&quot;doi_id_from_json_1&quot;);
+log.info(&quot;order idnya: &quot;+doi_id1);
+//doi ke kedua
+String doi_id2 = vars.get(&quot;doi_id_from_json_2&quot;);
+log.info(&quot;order idnya: &quot;+doi_id2);
+//doi ke ketiga
+String doi_id3 = vars.get(&quot;doi_id_from_json_3&quot;);
+log.info(&quot;order idnya: &quot;+doi_id3);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-doi_id1.csv&quot;, true);
+fstream.write(do_id+&quot;,&quot;+doi_id1+&quot;,&quot;+doi_id2+&quot;,&quot;+doi_id3);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">apidev.edenfarm.tech</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/warehouse/delivery_order?perpage=100&amp;embeds=sales_order_id,sales_order_id.area_id,sales_order_id.branch_id,wrt_id,warehouse_id&amp;conditions=Or.code.icontains:%252COr.sales_order_id.code.icontains:%7Crecognition_date:2022-05-30%7Cstatus:1&amp;orderby=-id</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DO ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">do_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extractor DOI ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">doi_id_from_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.delivery_order_items[*].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="write delivery  id for test data" enabled="true">
+            <stringProp name="TestPlan.comments">please change the file name to fit in your environment</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">//doi ke satu
+String do_id = vars.get(&quot;do_id_from_json&quot;);
+log.info(&quot;order idnya: &quot;+do_id);
+//doi ke satu
+String doi_id1 = vars.get(&quot;doi_id_from_json_1&quot;);
+log.info(&quot;order idnya: &quot;+doi_id1);
+//doi ke kedua
+String doi_id2 = vars.get(&quot;doi_id_from_json_2&quot;);
+log.info(&quot;order idnya: &quot;+doi_id2);
+//doi ke ketiga
+String doi_id3 = vars.get(&quot;doi_id_from_json_3&quot;);
+log.info(&quot;order idnya: &quot;+doi_id3);
+// Pass true if you want to append to existing file
+// If you want to overwrite, then don&apos;t pass the second argument
+FileWriter fstream = new FileWriter(&quot;test-data-doi_id1.csv&quot;, true);
+fstream.write(do_id+&quot;,&quot;+doi_id1+&quot;,&quot;+doi_id2+&quot;,&quot;+doi_id3);
+fstream.write(System.getProperty(&quot;line.separator&quot;));
+fstream.close();
+fstream.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="false">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">E:/apache-jmeter-5.3/bin/test-data-order_id.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">do_id</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+        <stringProp name="ConstantTimer.delay">1000</stringProp>
+      </ConstantTimer>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
